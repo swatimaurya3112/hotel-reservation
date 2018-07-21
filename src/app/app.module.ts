@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { BrowsersAnimationModule } from '@angular/platform-browser/animations'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
 
 
@@ -13,7 +13,7 @@ import { MaterialModule } from './material';
   ],
   imports: [
     BrowserModule,
-    BrowsersAnimationModule,
+    BrowserAnimationsModule,
     MaterialModule
   ],
   providers: [],
