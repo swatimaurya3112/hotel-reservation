@@ -1,3 +1,5 @@
+<app-search></app-search>
+
 <mat-card class="material-card" *ngFor="let room of rooms">
   <mat-grid-list cols="4" >
     <mat-grid-tile [colspan]="1">
@@ -11,7 +13,7 @@
       </mat-card-content>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="1">
-      <button mat-raised-button color="primary">Book Room</button>
+      <button mat-raised-button color="primary" routerLink="/booking/123">Book Room</button>
     </mat-grid-tile>
   </mat-grid-list>
 </mat-card>

@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import {HOTEL} from "./mock-hotel";
-
 
 @Component({
   selector: 'app-root',
@@ -9,5 +7,4 @@ import {HOTEL} from "./mock-hotel";
 })
 export class AppComponent {
   title = 'app';
-  hotel = HOTEL;
 }

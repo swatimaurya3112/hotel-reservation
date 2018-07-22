@@ -1,19 +1,9 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>{{hotel.name}}</span>
+    <span routerLink="/home">Reservation</span>
     <span class="toolbar-spacer"></span>
-    <mat-icon class="toolbar-icon">account_circle</mat-icon>
+    <mat-icon class="icon" routerLink="/profile">account_circle</mat-icon>
   </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-card class="material-card">
-  <img mat-card-image src={{hotel.image}} alt={{hotel.name}}>
-</mat-card>
-
-<app-search></app-search>
-
-<app-inventory></app-inventory>
-
-<app-booking></app-booking>
-
-<app-profile></app-profile>
+<router-outlet></router-outlet>
