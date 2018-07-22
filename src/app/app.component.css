@@ -5,33 +5,3 @@
 .toolbar-spacer {
   flex: 1 1 auto;
 }
-
-.material-card {
-  max-width: 90%;
-  max-height: 40%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 1%;
-}
-
-.booking-card {
-  width: 95%;
-  height: 60%;
-  margin: 1%;
-}
-
-.form-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-container > * {
-  width: 100%;
-}
-
-.profile-card {
-  display: table;
-  margin: 0 auto;
-  width: 50%
-
-}

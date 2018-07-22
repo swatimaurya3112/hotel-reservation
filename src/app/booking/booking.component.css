@@ -1,0 +1,14 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container > * {
+  width: 100%;
+}
+
+.booking-card {
+  width: 95%;
+  height: 60%;
+  margin: 1%;
+}
