@@ -1,21 +1,13 @@
-<mat-card class="material-card">
-  <mat-grid-list cols="4" rowHeight="200px">
+<mat-card class="material-card" *ngFor="let room of rooms">
+  <mat-grid-list cols="4" >
     <mat-grid-tile [colspan]="1">
-      <img mat-card-image src="../assets/42190703.jpg" alt="Tamara coorg">
+      <img mat-card-image src={{room.images[0]}} alt={{room.roomType}}>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="2">
       <mat-card-content style="margin: 10%">
-        <p style="text-align: justify;">Our luxury cottages located on a cliff offer a spectacular view of the
-          surrounding verdant greenery. The elegant interiors reflect the serenity of nature in subtle pastel tones. The
-          bed on an elevated platform adds a dramatic feel and a spacious look to the living area. The luxury cottage
-          opens to an east-facing private sundeck, an ideal haunt to unwind.</p>
-        <ul>
-          <li><strong>Number of Cottages:</strong> 41 &amp; 1 Accessible Cottage</li>
-          <li><strong>Dimension: </strong>608 square feet</li>
-          <li><strong>Occupancy: </strong>2 Adults</li>
-          <li><strong>Extra Person: </strong>1 Adult <em>(Age limit 12- 15 years on a 5ft Couch)</em></li>
-        </ul>
-        <p style="text-align: justify;"><strong>Price:</strong> Rs 18,000/night</p>
+        <p style="text-align: justify;">{{room.description}}</p>
+          <li *ngFor="let detail of room.details"><strong>{{detail[0]}}</strong> {{detail[1]}}</li>
+        <p style="text-align: justify;"><strong>Price:</strong> ₹ {{room.price}}/night</p>
       </mat-card-content>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="1">

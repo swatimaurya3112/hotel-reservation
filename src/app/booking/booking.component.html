@@ -36,35 +36,16 @@
     <mat-grid-tile>
       <mat-card class="booking-card">
         <mat-grid-list cols="2">
-          <mat-grid-tile>
-            <img mat-card-image src="../assets/42190703.jpg" alt="Tamara coorg">
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <img mat-card-image src="../assets/42190719.jpg" alt="Tamara coorg">
+          <mat-grid-tile *ngFor="let image of room.images">
+            <img mat-card-image src={{image}}>
           </mat-grid-tile>
         </mat-grid-list>
         <mat-card-content>
           <p style="text-align: justify;">
-            Our Luxury Cottages are fully equipped with all amenities to make your stay pleasant and comfortable. These
-            rooms come with complimentary non-alcoholic mini bar, LCD television with satellite channels, free Wi-Fi and
-            comfortable lounge chairs in a private balcony – perfect for a lazy holiday! </p>
+            {{room.offerings}}</p>
 
           <h4>Amenities</h4>
-
-          <mat-icon matTooltip="Non-alcoholic minibar replenished once in day">restaurant</mat-icon>
-
-          <mat-icon matTooltip="Plush King Bed with ergonomic mattress">hotel</mat-icon>
-
-          <mat-icon matTooltip="Free Wi-Fi during stay">wifi</mat-icon>
-
-          <mat-icon matTooltip="42″ LCD TV with satellite channels">live_tv</mat-icon>
-
-          <mat-icon matTooltip="Chess board on coffee table, recliner sofa at private sundeck ">casino</mat-icon>
-
-          <mat-icon matTooltip="Telephone, electronic safe, air conditioner, coffee and tea maker, rain shower, organic shower
-                  supplies, hair dryer, electric golf car on call">all_inclusive
-          </mat-icon>
-
+          <mat-icon *ngFor="let key of amenities" matTooltip={{room.amenities[key]}}>{{key}}</mat-icon>
         </mat-card-content>
         <mat-card-actions>
           <mat-checkbox>I Accept Terms and conditions</mat-checkbox>
