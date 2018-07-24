@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Hotel} from "../../model/hotel";
 import {Room} from "../../model/room";
 import {HotelService} from "../../service/hotel.service";
+import {AvailabilityService} from "../../service/availability.service";
+import {Search} from "../../model/search";
 
 @Component({
   selector: 'app-inventory',
@@ -10,26 +12,18 @@ import {HotelService} from "../../service/hotel.service";
 })
 export class InventoryComponent implements OnInit {
 
-  hotel: Hotel;
-  rooms: Room[];
+  get rooms() : Room[]{
+     return this.availabilityService.rooms;
+  }
 
-  constructor(private hotelService: HotelService) { }
+  get search() : Search{
+    return this.availabilityService.search;
+  }
+
+  constructor(private availabilityService: AvailabilityService) { }
 
   ngOnInit() {
-    this.getHotel();
   }
 
-  getHotel() {
-    this.hotelService.getHotel()
-      .subscribe(data => {
-          this.hotel = data;
-          this.rooms = data.roomList;
-          console.log("data in hotelService is");
-          console.log(data)
-        },
-        error => {
-          console.log("Rrror", error);
-        });
-  }
 
 }

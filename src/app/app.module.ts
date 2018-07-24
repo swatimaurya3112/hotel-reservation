@@ -12,6 +12,9 @@ import { InventoryComponent } from './component/inventory/inventory.component';
 import { SearchComponent } from './component/search/search.component';
 import { HomeComponent } from './component/home/home.component';
 import { HotelService } from './service/hotel.service';
+import { BookingService } from './service/booking.service';
+import { CustomerService } from './service/customer.service';
+import { AvailabilityService } from './service/availability.service';
 import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
@@ -32,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [HotelService],
+  providers: [HotelService, BookingService, AvailabilityService, CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

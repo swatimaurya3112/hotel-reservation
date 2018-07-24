@@ -1,0 +1,14 @@
+{
+  "customerId":1,
+  "name": "Swati",
+  "email": "swatimaurya3112@gmail.com",
+  "userName": "swatimaurya3112",
+  "password": "swati123",
+  "phoneNumber": 9415142156,
+  "address1": "B902 Brigade Metropolis",
+  "address2": "Mahadevapura",
+  "city": "Bangalore",
+  "state": "Karnataka",
+  "country": "India",
+  "zipcode": 560048
+}

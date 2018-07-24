@@ -8,4 +8,5 @@ export interface Room {
   offerings: string;
   amenities: Amenities;
   price: number;
+  numberOfRooms: number;
 }

@@ -1,5 +1,5 @@
 {
-  "id": "5eced",
+  "id": "5b579bc6cbcef7a23ef60013",
   "name": "The Tamara Coorg",
   "image": "../assets/Tamara-Coorg.jpeg",
   "roomList": [
@@ -28,8 +28,6 @@
           "1 Adult (Age limit 12- 15 years on a 5ft Couch)"
         ]
       ],
-      "price": 18000,
-      "offerings": "Our Luxury Cottages are fully equipped with all amenities to make your stay pleasant and comfortable. These rooms come with complimentary non-alcoholic mini bar, LCD television with satellite channels, free Wi-Fi and comfortable lounge chairs in a private balcony – perfect for a lazy holiday!",
       "amenities": {
         "restaurant": "Non-alcoholic minibar replenished once in day",
         "hotel": "Plush King Bed with ergonomic mattress",
@@ -37,7 +35,9 @@
         "live_tv": "42″ LCD TV with satellite channels",
         "casino": "Chess board on coffee table, recliner sofa at private sundeck",
         "all_inclusive": "Telephone, electronic safe, air conditioner, coffee and tea maker, rain shower, organic shower supplies, hair dryer, electric golf car on call"
-      }
+      },
+      "numberOfRooms": 41,
+      "price": 18000
     },
     {
       "roomType": "Superior Luxury Cottage",
@@ -64,8 +64,6 @@
           "No"
         ]
       ],
-      "price": 27000,
-      "offerings": "Superior Luxury Cottages are fully equipped with superior linen and ultra-modern in-room amenities like complimentary non-alcoholic mini bar, 3D LED television with HD satellite channels, 3D movie library, free Wi-Fi and comfortable lounge chairs in the private balcony.",
       "amenities": {
         "restaurant": "Non- alcoholic minibar replenished once in day and alcoholic beverages on chargeable basis",
         "hotel": "Plush King Bed with ergonomic mattress, superior bed linen",
@@ -73,7 +71,9 @@
         "live_tv": "50″ 3D LCD television, Apple TV, 3D movie library, Ipad",
         "casino": "Chess board on coffee table, recliner sofa on private sundeck, binoculars",
         "all_inclusive": "Telephone, electronic safe, air conditioner, coffee and tea maker, rain shower, organic shower supplies, hair dryer, electric golf car on call"
-      }
+      },
+      "numberOfRooms": 4,
+      "price": 27000
     },
     {
       "roomType": "Suite Cottage",
@@ -100,8 +100,6 @@
           " 1 Adult (On 5ft Couch)"
         ]
       ],
-      "price": 34000,
-      "offerings": "Suite Cottages are equipped with modern in-room amenities like complimentary non-alcoholic mini bar, LED television with satellite channels, free Wi-Fi and comfortable lounge chairs in a large private sundeck for a perfect holiday!",
       "amenities": {
         "restaurant": "Non-alcoholic minibar replenished once in day",
         "hotel": "Plush King Bed with ergonomic mattress",
@@ -109,7 +107,9 @@
         "live_tv": "42″ LCD TV with satellite channels",
         "casino": "Chess board on coffee table, recliner sofa at private sundeck",
         "all_inclusive": "Telephone, electronic safe, air conditioner, coffee and tea maker, rain shower, organic shower supplies, hair dryer, electric golf car on call"
-      }
+      },
+      "numberOfRooms": 8,
+      "price": 34000
     },
     {
       "roomType": "Eden Lotus Cottage",
@@ -136,8 +136,6 @@
           "No"
         ]
       ],
-      "price": 60000,
-      "offerings": "Eden Lotus Cottages are equipped with superior linen and ultra-modern in-room amenities like complimentary non-alcoholic mini bar, 3D LED television with HD satellite channels, 3D movie library, free Wi-Fi and comfortable lounge chairs and a Jacuzzi in the private balcony.",
       "amenities": {
         "restaurant": "Non- alcoholic minibar replenished once in day and alcoholic beverages on chargeable basis",
         "hotel": "Plush King Bed with ergonomic mattress, superior bed linen",
@@ -145,7 +143,9 @@
         "live_tv": "50″ 3D LED television, Apple TV, 3D movie library",
         "casino": "Chess board on coffee table, recliner sofa at private sundeck with Jacuzzi",
         "all_inclusive": "Telephone, electronic safe, air conditioner, coffee and tea maker, rain shower, organic shower supplies, hair dryer, electric golf car on call"
-      }
+      },
+      "numberOfRooms": 2,
+      "price": 60000
     }
   ]
 }

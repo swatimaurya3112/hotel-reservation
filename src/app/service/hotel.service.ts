@@ -11,7 +11,6 @@ export class HotelService {
   private _url: string = "/assets/data/hotel.json";
 
   constructor(private http: HttpClient) {
-    console.log("IN hotel service");
   }
 
   getHotel(): Observable<Hotel> {
