@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ProfileComponent } from './profile/profile.component';
-import { BookingComponent } from './booking/booking.component';
-import { InventoryComponent } from './inventory/inventory.component';
-import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './component/profile/profile.component';
+import { BookingComponent } from './component/booking/booking.component';
+import { InventoryComponent } from './component/inventory/inventory.component';
+import { HomeComponent } from './component/home/home.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },

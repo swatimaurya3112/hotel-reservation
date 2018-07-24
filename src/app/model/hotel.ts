@@ -3,7 +3,7 @@
  */
 import { Room } from "./room";
 
-export class Hotel {
+export interface Hotel {
   id: string;
   name: string;
   image: string;

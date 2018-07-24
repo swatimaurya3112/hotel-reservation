@@ -2,7 +2,7 @@
  * Created by swati on 7/22/18.
  */
 
-export class Amenities {
+export interface Amenities {
   restaurant: string;
   hotel: string;
   wifi: string;

@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
 import { AppRoutingModule } from './app-routing.module';
-import { BookingComponent } from './booking/booking.component';
-import { ProfileComponent } from './profile/profile.component';
-import { InventoryComponent } from './inventory/inventory.component';
-import { SearchComponent } from './search/search.component';
-import { HomeComponent } from './home/home.component';
+import { BookingComponent } from './component/booking/booking.component';
+import { ProfileComponent } from './component/profile/profile.component';
+import { InventoryComponent } from './component/inventory/inventory.component';
+import { SearchComponent } from './component/search/search.component';
+import { HomeComponent } from './component/home/home.component';
+import { HotelService } from './service/hotel.service';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -27,9 +29,10 @@ import { HomeComponent } from './home/home.component';
     MaterialModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HotelService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
