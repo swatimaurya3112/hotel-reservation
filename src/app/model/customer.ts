@@ -4,7 +4,7 @@
 
 export class Customer{
     constructor(
-      public id: number,
+      public customerId: number,
       public name: string,
       public email: string,
       public phoneNumber: number,

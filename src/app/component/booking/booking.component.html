@@ -9,26 +9,26 @@
           <h3>Guest Details</h3>
 
           <mat-form-field>
-            <input matInput placeholder="Name" type="text">
+            <input matInput placeholder="Name" type="text" [(ngModel)]="customer.name">
           </mat-form-field>
           <mat-form-field>
-            <input matInput placeholder="Email" type="email">
+            <input matInput placeholder="Email" type="email" [(ngModel)]="customer.email">
           </mat-form-field>
 
           <mat-form-field>
-            <input matInput placeholder="Mobile Number" type="number">
+            <input matInput placeholder="Mobile Number" type="number" [(ngModel)]="customer.phoneNumber">
             <span matPrefix>+91&nbsp;</span>
           </mat-form-field>
 
-          <h3>Payment Details</h3>
+          <!--<h3>Payment Details</h3>
           <mat-form-field>
-            <input matInput placeholder="Card Holder's Name" type="text">
+            <input matInput placeholder="Card Holder's Name" type="text" [(ngModel)]="card.cardName">
             <mat-icon class="icon"matPrefix>account_box</mat-icon>
           </mat-form-field>
           <mat-form-field>
-            <input matInput placeholder="Card Number" type="number">
+            <input matInput placeholder="Card Number" type="text" pattern="[0-9]{15}" [(ngModel)]="card.cardNumber">
             <mat-icon class="icon" matPrefix>credit_card</mat-icon>
-          </mat-form-field>
+          </mat-form-field>-->
         </div>
 
       </mat-card>
@@ -54,6 +54,6 @@
     </mat-grid-tile>
   </mat-grid-list>
   <mat-card-actions align="end">
-    <button mat-raised-button color="primary">Book</button>
+    <button mat-raised-button color="primary" (click)="book()">Book</button>
   </mat-card-actions>
 </mat-card>

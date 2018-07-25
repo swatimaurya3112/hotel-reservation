@@ -1,5 +1,5 @@
 <mat-card class="material-card">
-  <form #searchForm="ngForm" novalidate (ngSubmit)="onSubmit()">
+  <form #searchForm="ngForm" novalidate>
 
     <mat-grid-list cols="4" rowHeight="100px">
 
@@ -31,7 +31,7 @@
     </mat-grid-tile>
 
     <mat-grid-tile>
-      <button mat-raised-button color="primary" routerLink="/booking">Check Availability</button>
+      <button type="submit" mat-raised-button color="primary" (click)="checkRooms(search)"routerLink="/search">Check Availability</button>
     </mat-grid-tile>
 
   </mat-grid-list>

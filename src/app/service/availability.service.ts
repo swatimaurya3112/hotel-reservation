@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Search} from "../model/search";
 import {Room} from "../model/room";
 import {Observable} from "rxjs";
+import {HotelService} from "./hotel.service";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,9 @@ export class AvailabilityService {
 
   _postUrl = "http://localhost:8080/api/availability";
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private hotelService:HotelService) {
+    this.search = new Search(new Date(),new Date, 2, this.hotelService.hotel.id)
+  }
 
   findAvailability(search: Search) {
     this.search = search;

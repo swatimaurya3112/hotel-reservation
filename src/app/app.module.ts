@@ -15,7 +15,8 @@ import { HotelService } from './service/hotel.service';
 import { BookingService } from './service/booking.service';
 import { CustomerService } from './service/customer.service';
 import { AvailabilityService } from './service/availability.service';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ThankyouComponent } from './component/thankyou/thankyou.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http'
     ProfileComponent,
     InventoryComponent,
     SearchComponent,
-    HomeComponent
+    HomeComponent,
+    ThankyouComponent
   ],
   imports: [
     BrowserModule,

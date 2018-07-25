@@ -1,0 +1,27 @@
+<mat-card class="thankyou-card">
+  <mat-grid-list cols="1">
+    <mat-card class="thankyou-card">
+      <mat-card-header>
+        <mat-card-title>Thank You</mat-card-title>
+        <mat-card-subtitle>{{customer.name}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src={{room.images[0]}}>
+      <mat-card-content>
+        <p>
+          Your booking has been confirmed for {{hotel.name}}.
+          <mat-list>
+            <mat-list-item><strong>Booking Details</strong></mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>{{room.roomType}}</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>From: {{bookingRequest.from| date:'mediumDate'}}</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>To: {{bookingRequest.to| date:'mediumDate'}}</mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>Adults: {{bookingRequest.adults}}</mat-list-item>
+          </mat-list>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-list>
+</mat-card>

@@ -4,6 +4,7 @@ import {Room} from "../../model/room";
 import {HotelService} from "../../service/hotel.service";
 import {AvailabilityService} from "../../service/availability.service";
 import {Search} from "../../model/search";
+import {BookingService} from "../../service/booking.service";
 
 @Component({
   selector: 'app-inventory',
@@ -20,9 +21,13 @@ export class InventoryComponent implements OnInit {
     return this.availabilityService.search;
   }
 
-  constructor(private availabilityService: AvailabilityService) { }
+  constructor(private availabilityService: AvailabilityService, private bookingService: BookingService) { }
 
   ngOnInit() {
+  }
+
+  startBooking(room: Room){
+    this.bookingService.startBooking(room);
   }
 
 

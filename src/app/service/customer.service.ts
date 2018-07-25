@@ -8,7 +8,9 @@ import {Observable} from "rxjs";
 })
 export class CustomerService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.getCustomer();
+  }
 
   customer: Customer;
 
@@ -16,12 +18,20 @@ export class CustomerService {
 
   _getUrl: string = "/assets/data/customer.json";
 
-  getCustomer(): Observable<Customer>{
-    return this.http.get<Customer>(this._getUrl);
+  getCustomer() {
+    return this.http.get<Customer>(this._getUrl)
+      .subscribe(
+        data => this.customer = data,
+        error => console.log(error)
+      );
   }
 
   saveCustomer(customer:Customer) {
-    return this.http.post<any>(this._postUrl,customer);
+    return this.http.post<any>(this._postUrl,customer)
+      .subscribe(
+        data => this.customer = data,
+        error => console.log(error)
+      );
   }
 
 }

@@ -13,7 +13,7 @@
       </mat-card-content>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="1">
-      <button mat-raised-button color="primary" routerLink="/booking/123">Book Room</button>
+      <a routerLink="/book"><button mat-raised-button color="primary" (click)="startBooking(room)" >Book Room</button></a>
     </mat-grid-tile>
   </mat-grid-list>
 </mat-card>

@@ -2,6 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import {HotelService} from "../../service/hotel.service";
 import {Room} from "../../model/room";
 import {Hotel} from "../../model/hotel";
+import {BookingService} from "../../service/booking.service";
+import {Customer} from "../../model/customer";
+import {CustomerService} from "../../service/customer.service";
+import {Card} from "../../model/card";
+import {Search} from "../../model/search";
+import {AvailabilityService} from "../../service/availability.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-booking',
@@ -10,29 +17,48 @@ import {Hotel} from "../../model/hotel";
 })
 export class BookingComponent implements OnInit {
 
-  hotel: Hotel;
+  get hotel() : Hotel {
+    return this.hotelService.hotel;
+  }
 
-  room: Room;
+  get room() : Room {
+    return this.bookingService.room;
+  }
 
-  amenities: string[];
+  get amenities() : string[] {
+    return Object.keys(this.room.amenities);
+  }
 
-  constructor(private hotelService: HotelService) { }
+  get customer() : Customer {
+    return this.customerService.customer;
+  }
+
+  get search() : Search{
+    return this.availabilityService.search;
+  }
+
+
+  constructor(private router: Router,
+              private hotelService: HotelService,
+              private bookingService: BookingService,
+              private customerService: CustomerService,
+              private availabilityService: AvailabilityService) { }
 
   ngOnInit() {
-    this.getHotel();
   }
 
-  getHotel() {
-    this.hotelService.getHotel()
-      .subscribe(data => {
-          this.hotel = data;
-          this.room = data.roomList[0];
-          this.amenities = Object.keys(this.room.amenities);
-          console.log("data in hotelService is");
-          console.log(data)
-        },
+  book() {
+    this.bookingService.bookRoom(this.customer,this.room, this.search)
+      .subscribe(
+        data => {
+          console.log(data);
+          this.router.navigate(['/thankyou']);
+          },
         error => {
-          console.log("Rrror", error);
-        });
+          console.log(error);
+          this.router.navigate(['/home']);
+        }
+      )
   }
+
 }

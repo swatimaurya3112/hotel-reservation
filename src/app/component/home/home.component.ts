@@ -9,27 +9,14 @@ import {Hotel} from "../../model/hotel";
 })
 export class HomeComponent implements OnInit {
 
-  hotel : Hotel;
-
-  constructor(private hotelService: HotelService) { }
-
-  ngOnInit() {
-    console.log("inside home component");
-    console.log(this.hotel);
-    this.getHotel();
-    console.log(this.hotel);
+  get hotel() : Hotel {
+    return this.hotelService.hotel;
   }
 
-  getHotel() {
-    this.hotelService.getHotel()
-      .subscribe(data => {
-        this.hotel = data;
-        console.log("data in hotelService is");
-        console.log(data)
-      },
-        error => {
-          console.log("Rrror", error);
-        });
+  constructor(private hotelService: HotelService) {
+  }
+
+  ngOnInit() {
   }
 
 }

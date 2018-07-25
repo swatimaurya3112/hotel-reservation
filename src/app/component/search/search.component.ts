@@ -11,25 +11,23 @@ import {Hotel} from "../../model/hotel";
 })
 export class SearchComponent implements OnInit {
 
-  search: Search;
-  hotel: Hotel;
+  get hotel() : Hotel{
+    return this.hotelService.hotel;
+  }
+
+  get search() : Search{
+    return this.availabilityService.search;
+  }
 
   constructor(private availabilityService:AvailabilityService, private hotelService: HotelService) {
 
   }
 
   ngOnInit() {
-    this.hotel = this.hotelService.getHotel().subscribe(
-      (data:Hotel)=> {
-        this.hotel = data;
-        this.search = new Search(new Date(),new Date(),2,this.hotel.id);
-      },
-      error=>console.log(error)
-    );
   }
 
-  onSubmit() {
-    console.log(this.search);
+  checkRooms(search:Search) {
+    console.log(search);
     this.availabilityService.findAvailability(this.search);
   }
 

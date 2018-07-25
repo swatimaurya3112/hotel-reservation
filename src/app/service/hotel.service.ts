@@ -8,13 +8,20 @@ import {HttpClient} from "@angular/common/http";
 @Injectable()
 export class HotelService {
 
+  hotel: Hotel;
+
   private _url: string = "/assets/data/hotel.json";
 
   constructor(private http: HttpClient) {
+    this.getHotel();
   }
 
-  getHotel(): Observable<Hotel> {
-    return this.http.get<Hotel>(this._url);
+  getHotel() {
+    return this.http.get<Hotel>(this._url)
+      .subscribe(
+        data => this.hotel = data,
+        error => console.log(error)
+      );
   }
 
 }
