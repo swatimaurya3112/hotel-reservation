@@ -16,7 +16,7 @@ export class AvailabilityService {
   _postUrl = "http://localhost:8080/api/availability";
 
   constructor(private http: HttpClient, private hotelService:HotelService) {
-    this.search = new Search(new Date(),new Date, 2, this.hotelService.hotel.id)
+    this.search = new Search(new Date(),new Date(), 2, this.hotelService.hotel.id)
   }
 
   findAvailability(search: Search) {

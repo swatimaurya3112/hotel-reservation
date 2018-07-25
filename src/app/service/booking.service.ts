@@ -24,12 +24,12 @@ export class BookingService {
   }
 
   bookRoom(customer:Customer,room:Room,search:Search){
-    this.constructBookingRequest(customer,room,search);
+    this.constructBookingRequest(room,search);
     return this.http.post<any>(this._url+customer.customerId+"/book",this.bookingRequest);
   }
 
 
-  constructBookingRequest(customer:Customer,room:Room,search:Search) {
+  constructBookingRequest(room:Room,search:Search) {
     this.bookingRequest = new BookingRequest(
       search.hotelId,
       room.roomType,

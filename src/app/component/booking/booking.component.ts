@@ -17,10 +17,6 @@ import { Router } from '@angular/router';
 })
 export class BookingComponent implements OnInit {
 
-  get hotel() : Hotel {
-    return this.hotelService.hotel;
-  }
-
   get room() : Room {
     return this.bookingService.room;
   }
@@ -39,7 +35,6 @@ export class BookingComponent implements OnInit {
 
 
   constructor(private router: Router,
-              private hotelService: HotelService,
               private bookingService: BookingService,
               private customerService: CustomerService,
               private availabilityService: AvailabilityService) { }

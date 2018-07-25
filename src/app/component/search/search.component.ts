@@ -11,23 +11,17 @@ import {Hotel} from "../../model/hotel";
 })
 export class SearchComponent implements OnInit {
 
-  get hotel() : Hotel{
-    return this.hotelService.hotel;
-  }
-
   get search() : Search{
     return this.availabilityService.search;
   }
 
-  constructor(private availabilityService:AvailabilityService, private hotelService: HotelService) {
-
+  constructor(private availabilityService:AvailabilityService) {
   }
 
   ngOnInit() {
   }
 
   checkRooms(search:Search) {
-    console.log(search);
     this.availabilityService.findAvailability(this.search);
   }
 

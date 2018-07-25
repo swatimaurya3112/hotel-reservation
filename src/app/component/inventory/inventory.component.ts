@@ -21,7 +21,8 @@ export class InventoryComponent implements OnInit {
     return this.availabilityService.search;
   }
 
-  constructor(private availabilityService: AvailabilityService, private bookingService: BookingService) { }
+  constructor(private availabilityService: AvailabilityService,
+              private bookingService: BookingService) { }
 
   ngOnInit() {
   }
